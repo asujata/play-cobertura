@@ -321,6 +321,7 @@ public class CoberturaPlugin extends PlayPlugin {
 		ClassInstrumenter cv;
 		try {
 			inputStream = new ByteArrayInputStream(applicationClass.enhancedByteCode);
+
 			ClassReader cr = new ClassReader(inputStream);
 			cw = new ClassWriter(ClassWriter.COMPUTE_MAXS);
 			cv = new ClassInstrumenter(projectData, cw, ignoreRegexes, ignoreBranchesRegexes);
